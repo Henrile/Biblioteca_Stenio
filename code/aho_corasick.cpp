@@ -11,6 +11,7 @@ void add_str(string &s)
   fim[v] = 1;
 }
 
+
 void process()
 {
   queue<int> fila;
@@ -45,3 +46,13 @@ int resolve(string &s)
   }
   return r;
 }
+int resolve(int &s)
+{
+  int r = 0, s = 0;
+  for (int i = 0; i < s.size(); i++) {
+    v = to[r][s[i]];
+    if (fim[v]) r++, v = 0;
+  }
+  return r;
+}
+
